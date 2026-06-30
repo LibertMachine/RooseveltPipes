@@ -374,6 +374,104 @@
         justify-content: center;
       }
     }
+    .hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px;
+  background: #ffffff;
+  color: #111111;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #8b6f3d;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  font-weight: 900;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.6;
+  color: #444;
+  margin: 0 auto 34px;
+  max-width: 620px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.hero-btn:hover {
+  background: #8b6f3d;
+}
+    .conversation-section {
+  padding: 90px 24px;
+  background: #111111;
+  color: #ffffff;
+  text-align: center;
+}
+
+.conversation-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.conversation-section h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 0 0 22px;
+}
+
+.conversation-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #d8d8d8;
+}
+
+.conversation-line {
+  color: #c9a45c !important;
+  font-weight: 800;
+  margin-top: 28px;
+}
+    .site-footer {
+  padding: 36px 24px;
+  background: #ffffff;
+  color: #111111;
+  text-align: center;
+  display: grid;
+  gap: 8px;
+}
+
+.site-footer span {
+  color: #8b6f3d;
+  font-weight: 700;
+}
+
+.site-footer small {
+  color: #666;
+}
   </style>
 </head>
 
@@ -416,7 +514,17 @@
         </div>
       </div>
     </section>
-
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Roosevelt Pipes</p>
+    <h1>Crafted for Conversations.</h1>
+    <p class="hero-subtitle">
+      Premium smoking accessories designed for slower evenings, better company,
+      and timeless craftsmanship.
+    </p>
+    <a href="#collection" class="hero-btn">Shop Collection</a>
+  </div>
+</section>
     <section id="craft">
       <div class="section-inner">
         <div class="section-title">
@@ -448,7 +556,20 @@
         </div>
       </div>
     </section>
-
+<section class="conversation-section">
+  <div class="conversation-inner">
+    <p class="eyebrow">The Roosevelt Standard</p>
+    <h2>More Than a Pipe.</h2>
+    <p>
+      Roosevelt Pipes are made for the moments that deserve to slow down —
+      the porch conversations, late-night ideas, old friends, quiet victories,
+      and stories that get better with time.
+    </p>
+    <p class="conversation-line">
+      Because the best conversations deserve exceptional craftsmanship.
+    </p>
+  </div>
+</section>
     <section id="collection" class="collection">
       <div class="section-inner">
         <div class="section-title">
@@ -513,11 +634,10 @@
 
   </main>
 
-  <footer id="contact">
-    <div class="footer-logo">Roosevelt Pipes</div>
-    <p>Premium smoking accessories for the modern collector.</p>
-    <p>© 2026 Roosevelt Pipes. All rights reserved.</p>
-  </footer>
-
+<footer class="site-footer">
+  <strong>Roosevelt Pipes</strong>
+  <span>Crafted for Conversations.</span>
+  <small>© 2026 Roosevelt Pipes. All rights reserved.</small>
+</footer> 
 </body>
 </html>
