@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roosevelt Pipes | Premium Smoking Accessories</title>
+
+  <style>
+    :root {
+      --black: #111111;
+      --charcoal: #1c1c1c;
+      --cream: #f5efe3;
+      --gold: #c7a45d;
+      --brown: #5a3928;
+      --gray: #b9b0a3;
+      --white: #fffaf2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--black);
+      color: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(17, 17, 17, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(199, 164, 93, 0.25);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: var(--gray);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      place-items: center;
+      padding: 90px 24px;
+      background:
+        linear-gradient(rgba(17,17,17,0.72), rgba(17,17,17,0.92)),
+        radial-gradient(circle at top right, rgba(199,164,93,0.18), transparent 35%),
+        linear-gradient(135deg, #111, #25170f);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--gray);
+      max-width: 560px;
+      margin-bottom: 34px;
+      font-family: Arial, sans-serif;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #d7b86f;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(199,164,93,0.12);
+    }
+
+    .product-card {
+      border: 1px solid rgba(199,164,93,0.35);
+      background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+    }
+
+    .pipe-placeholder {
+      height: 330px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle, rgba(199,164,93,0.2), transparent 55%),
+        linear-gradient(135deg, #302015, #111);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--gold);
+      text-align: center;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    section {
+      padding: 90px 24px;
+    }
+
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature {
+      background: var(--charcoal);
+      border: 1px solid rgba(199,164,93,0.22);
+      border-radius: 22px;
+      padding: 30px;
+    }
+
+    .feature span {
+      color: var(--gold);
+      font-size: 2rem;
+    }
+
+    .feature h3 {
+      margin: 18px 0 10px;
+      font-size: 1.35rem;
+    }
+
+    .feature p {
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .collection {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .item {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .item-image {
+      height: 220px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #2d1b12, #8a613d);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      margin-bottom: 22px;
+      font-size: 1.4rem;
+    }
+
+    .item h3 {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+    }
+
+    .item p {
+      color: #625648;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      color: var(--brown);
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .story {
+      background:
+        linear-gradient(rgba(17,17,17,0.92), rgba(17,17,17,0.92)),
+        linear-gradient(135deg, #111, #3b2618);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .story-box {
+      min-height: 380px;
+      border-radius: 28px;
+      border: 1px solid rgba(199,164,93,0.28);
+      background:
+        radial-gradient(circle at center, rgba(199,164,93,0.22), transparent 55%),
+        #181818;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .story-text h2 {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      margin-bottom: 22px;
+    }
+
+    .story-text p {
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      margin-bottom: 18px;
+    }
+
+    .age-note {
+      background: #0b0b0b;
+      border-top: 1px solid rgba(199,164,93,0.2);
+      border-bottom: 1px solid rgba(199,164,93,0.2);
+      text-align: center;
+      padding: 34px 24px;
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 45px 24px;
+      background: var(--black);
+      text-align: center;
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    footer .footer-logo {
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-inner,
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features,
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-row {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">Roosevelt Pipes</div>
+      <div class="nav-links">
+        <a href="#collection">Collection</a>
+        <a href="#craft">Craft</a>
+        <a href="#story">Story</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Premium Smoking Accessories</div>
+          <h1>Crafted for the distinguished ritual.</h1>
+          <p>
+            Roosevelt Pipes creates refined smoking accessories built for collectors,
+            connoisseurs, and those who appreciate timeless craftsmanship.
+          </p>
+
+          <div class="btn-row">
+            <a href="#collection" class="btn btn-primary">Explore Collection</a>
+            <a href="#story" class="btn btn-secondary">Our Story</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="pipe-placeholder">
+            Signature<br />Pipe
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="craft">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>Built with intention.</h2>
+          <p>
+            Every Roosevelt piece is designed to feel substantial, balanced,
+            and worthy of display.
+          </p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <span>◆</span>
+            <h3>Premium Materials</h3>
+            <p>Rich finishes, durable construction, and elevated details made for long-term ownership.</p>
+          </div>
+
+          <div class="feature">
+            <span>◆</span>
+            <h3>Refined Design</h3>
+            <p>Classic silhouettes with a modern luxury feel — understated, bold, and memorable.</p>
+          </div>
+
+          <div class="feature">
+            <span>◆</span>
+            <h3>Collector Appeal</h3>
+            <p>Designed not only to be used, but to be displayed, gifted, and appreciated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collection" class="collection">
+      <div class="section-inner">
+        <div class="section-title">
+          <h2>The Roosevelt Collection</h2>
+          <p>
+            Starter product cards. Replace these with your real product photos,
+            names, descriptions, and prices.
+          </p>
+        </div>
+
+        <div class="products">
+          <div class="item">
+            <div class="item-image">The Classic</div>
+            <h3>The Classic</h3>
+            <p>A timeless everyday piece with a polished profile and balanced hand-feel.</p>
+            <div class="price">$89</div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">The Executive</div>
+            <h3>The Executive</h3>
+            <p>A premium statement piece made for display, gifting, and refined enjoyment.</p>
+            <div class="price">$149</div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">The Heritage</div>
+            <h3>The Heritage</h3>
+            <p>A collector-inspired design with old-world character and modern finish.</p>
+            <div class="price">$199</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="section-inner story-grid">
+        <div class="story-box">
+          Roosevelt<br />Standard
+        </div>
+
+        <div class="story-text">
+          <div class="eyebrow">Our Philosophy</div>
+          <h2>Not just a pipe. A personal standard.</h2>
+          <p>
+            Roosevelt Pipes was created for people who see their accessories
+            as an extension of taste, routine, and identity.
+          </p>
+          <p>
+            Inspired by old-world craftsmanship and modern luxury, each piece
+            is designed to bring weight, character, and sophistication to the ritual.
+          </p>
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="age-note">
+      Roosevelt Pipes products are intended only for adults of legal smoking age.
+      Please enjoy responsibly and follow all applicable laws in your area.
+    </div>
+
+  </main>
+
+  <footer id="contact">
+    <div class="footer-logo">Roosevelt Pipes</div>
+    <p>Premium smoking accessories for the modern collector.</p>
+    <p>© 2026 Roosevelt Pipes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
