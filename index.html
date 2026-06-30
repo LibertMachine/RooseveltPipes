@@ -162,20 +162,30 @@
       box-shadow: 0 30px 80px rgba(0,0,0,0.45);
     }
 
-    .pipe-placeholder {
-      height: 330px;
-      border-radius: 22px;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle, rgba(199,164,93,0.2), transparent 55%),
-        linear-gradient(135deg, #302015, #111);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--gold);
-      text-align: center;
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
+    .product-card{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:1px solid rgba(199,164,93,.35);
+    border-radius:28px;
+    padding:40px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+.hero-logo{
+    width:100%;
+    max-width:420px;
+    height:auto;
+    display:block;
+}
 
     section {
       padding: 90px 24px;
@@ -472,7 +482,25 @@
 .site-footer small {
   color: #666;
 }
+    .hero-logo{
+    width:100%;
+    max-width:420px;
+    animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
   </style>
+  
 </head>
 
 <body>
@@ -499,6 +527,11 @@
           <p>
             Roosevelt Pipes creates refined smoking accessories built for collectors,
             connoisseurs, and those who appreciate timeless craftsmanship.
+          <div class="product-card">
+    <img src="RooseveltLogo.PNG"
+         alt="Roosevelt Pipes Logo"
+         class="hero-logo">
+</div>
           </p>
 
           <div class="btn-row">
